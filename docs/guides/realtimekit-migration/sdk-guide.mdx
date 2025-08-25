@@ -55,7 +55,6 @@ The Dyte SDKs are now in maintenance mode and will no longer receive feature upd
     | Dyte SDK                                                                          | RealtimeKit SDK                                                                                   |
     | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
     | [`@dytesdk/web-core`](https://www.npmjs.com/package/@dytesdk/web-core)              | [`@cloudflare/realtimekit`](https://www.npmjs.com/package/@cloudflare/realtimekit)                  |
-    | [`@dytesdk/react-web-core`](https://www.npmjs.com/package/@dytesdk/react-web-core)  | [`@cloudflare/realtimekit-react`](https://www.npmjs.com/package/@cloudflare/realtimekit-react)      |
     | [`@dytesdk/react-native-core`](https://www.npmjs.com/package/@dytesdk/react-native-core)  | [`@cloudflare/realtimekit-react-native`](https://www.npmjs.com/package/@cloudflare/realtimekit-react-native)      |
     | [`@dytesdk/react-native-ui-kit`](https://www.npmjs.com/package/@dytesdk/react-native-ui-kit)      | [`@cloudflare/realtimekit-react-native-ui`](https://www.npmjs.com/package/@cloudflare/realtimekit-react-native-ui) |
   </TabItem>
@@ -510,14 +509,44 @@ The Dyte SDKs are now in maintenance mode and will no longer receive feature upd
     First, uninstall all Dyte packages from your project:
 
     ```bash
-    npm uninstall @dytesdk/web-core @dytesdk/react-web-core @dytesdk/react-native-core @dytesdk/react-native-ui-kit
+    npm uninstall @dytesdk/web-core @dytesdk/react-native-core @dytesdk/react-native-ui-kit @dyteinternals/react-native-webrtc
+    ```
+
+    Next, Uninstall all the old ui-kit dependencies from your project:
+
+    ```bash
+    npm uninstall react-native-document-picker react-native-file-viewer react-native-fs react-native-safe-area-context react-native-sound-player react-native-svg react-native-webview
+    ```
+
+    Next install all the new ui-kit dependencies:
+
+    ```bash
+    npm install react-native-document-picker react-native-file-viewer react-native-fs react-native-safe-area-context react-native-sound-player react-native-svg react-native-webview
     ```
 
     Next, install the corresponding Cloudflare RealtimeKit packages:
 
     ```bash
-    npm install @cloudflare/realtimekit @cloudflare/realtimekit-react @cloudflare/realtimekit-react-native-core @cloudflare/realtimekit-react-native-ui-kit
+    npm install @cloudflare/realtimekit @cloudflare/realtimekit-react-native-core @cloudflare/realtimekit-react-native-ui-kit @cloudflare/react-native-webrtc
     ```
+
+    Install these **required** dependencies as per your ```react-native``` version.
+
+    - ```react-native-safe-area-context```
+      - **react-native (0.64 - 0.74)** : 
+        ```bash
+        npm install react-native-safe-area-context@^4.0.0
+        ```
+      - **react-native (>= 0.74)** : 
+        ```bash
+        npm install react-native-safe-area-context@^5.0.0
+        ```
+
+    - ```react-native-svg```
+      - Follow the [installation instructions](https://github.com/react-native-svg/react-native-svg#installation) for react-native-svg.
+      - ```bash
+        npm install react-native-svg@<compatible-version>
+        ```
 
     ### 2. Update Import Paths
 
@@ -526,7 +555,6 @@ The Dyte SDKs are now in maintenance mode and will no longer receive feature upd
     | Find                                   | Replace With                               |
     | -------------------------------------- | ------------------------------------------ |
     | `@dytesdk/web-core`                      | `@cloudflare/realtimekit`                  |
-    | `@dytesdk/react-web-core`                | `@cloudflare/realtimekit-react`            |
     | `@dytesdk/react-native-core`             | `@cloudflare/realtimekit-react-native`|
     | `@dytesdk/react-native-ui-kit`           | `@cloudflare/realtimekit-react-native-ui`|
 
