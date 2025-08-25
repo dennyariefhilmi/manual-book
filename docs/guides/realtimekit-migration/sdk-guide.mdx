@@ -1,0 +1,651 @@
+---
+title: SDK Migration Guide
+sidebar_position: 1
+tags:
+  - migration
+  - setup
+---
+
+# SDK Migration Guide
+
+As [Dyte joins Cloudflare](https://blog.cloudflare.com/introducing-cloudflare-realtime-and-realtimekit), we are transitioning all Dyte SDKs to the new Cloudflare RealtimeKit SDKs.
+
+:::danger
+The Dyte SDKs are now in maintenance mode and will no longer receive feature updates or bug fixes. We strongly recommend migrating to the Cloudflare RealtimeKit SDKs to ensure you continue to receive the latest features and improvements. You can find the official documentation for RealtimeKit [here](https://docs.realtime.cloudflare.com/).
+:::
+
+### Package Mapping
+
+<Tabs groupId="framework">
+  <TabItem value="web-components" label="Web Components">
+    The following table maps the deprecated Dyte SDKs to their new Cloudflare RealtimeKit equivalents for Web Components:
+    | Dyte SDK                                                                          | RealtimeKit SDK                                                                                   |
+    | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+    | [`@dytesdk/web-core`](https://www.npmjs.com/package/@dytesdk/web-core)              | [`@cloudflare/realtimekit`](https://www.npmjs.com/package/@cloudflare/realtimekit)                  |
+    | [`@dytesdk/ui-kit`](https://www.npmjs.com/package/@dytesdk/ui-kit)                  | [`@cloudflare/realtimekit-ui`](https://www.npmjs.com/package/@cloudflare/realtimekit-ui)            |
+    | [`@dytesdk/ui-kit-addons`](https://www.npmjs.com/package/@dytesdk/ui-kit-addons)    | [`@cloudflare/realtimekit-ui-addons`](https://www.npmjs.com/package/@cloudflare/realtimekit-ui-addons) |
+    | [`@dytesdk/video-background-transformer`](https://www.npmjs.com/package/@dytesdk/video-background-transformer) | [`@cloudflare/realtimekit-virtual-background`](https://www.npmjs.com/package/@cloudflare/realtimekit-virtual-background) |
+    | [`@dytesdk/recording-sdk`](https://www.npmjs.com/package/@dytesdk/recording-sdk)    | [`@cloudflare/realtimekit-recording-sdk`](https://www.npmjs.com/package/@cloudflare/realtimekit-recording-sdk) |
+  </TabItem>
+  <TabItem value="react" label="React">
+    The following table maps the deprecated Dyte SDKs to their new Cloudflare RealtimeKit equivalents for React:
+    | Dyte SDK                                                                          | RealtimeKit SDK                                                                                   |
+    | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+    | [`@dytesdk/web-core`](https://www.npmjs.com/package/@dytesdk/web-core)              | [`@cloudflare/realtimekit`](https://www.npmjs.com/package/@cloudflare/realtimekit)                  |
+    | [`@dytesdk/react-web-core`](https://www.npmjs.com/package/@dytesdk/react-web-core)  | [`@cloudflare/realtimekit-react`](https://www.npmjs.com/package/@cloudflare/realtimekit-react)      |
+    | [`@dytesdk/ui-kit`](https://www.npmjs.com/package/@dytesdk/ui-kit)                  | [`@cloudflare/realtimekit-ui`](https://www.npmjs.com/package/@cloudflare/realtimekit-ui)            |
+    | [`@dytesdk/react-ui-kit`](https://www.npmjs.com/package/@dytesdk/react-ui-kit)      | [`@cloudflare/realtimekit-react-ui`](https://www.npmjs.com/package/@cloudflare/realtimekit-react-ui) |
+    | [`@dytesdk/ui-kit-addons`](https://www.npmjs.com/package/@dytesdk/ui-kit-addons)    | [`@cloudflare/realtimekit-ui-addons`](https://www.npmjs.com/package/@cloudflare/realtimekit-ui-addons) |
+    | [`@dytesdk/video-background-transformer`](https://www.npmjs.com/package/@dytesdk/video-background-transformer) | [`@cloudflare/realtimekit-virtual-background`](https://www.npmjs.com/package/@cloudflare/realtimekit-virtual-background) |
+    | [`@dytesdk/recording-sdk`](https://www.npmjs.com/package/@dytesdk/recording-sdk)    | [`@cloudflare/realtimekit-recording-sdk`](https://www.npmjs.com/package/@cloudflare/realtimekit-recording-sdk) |
+  </TabItem>
+  <TabItem value="angular" label="Angular">
+    The following table maps the deprecated Dyte SDKs to their new Cloudflare RealtimeKit equivalents for Angular:
+    | Dyte SDK                                                                          | RealtimeKit SDK                                                                                   |
+    | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+    | [`@dytesdk/web-core`](https://www.npmjs.com/package/@dytesdk/web-core)              | [`@cloudflare/realtimekit`](https://www.npmjs.com/package/@cloudflare/realtimekit)                  |
+    | [`@dytesdk/ui-kit`](https://www.npmjs.com/package/@dytesdk/ui-kit)                  | [`@cloudflare/realtimekit-ui`](https://www.npmjs.com/package/@cloudflare/realtimekit-ui)            |
+    | [`@dytesdk/angular-ui-kit`](https://www.npmjs.com/package/@dytesdk/angular-ui-kit)  | [`@cloudflare/realtimekit-angular-ui`](https://www.npmjs.com/package/@cloudflare/realtimekit-angular-ui) |
+    | [`@dytesdk/ui-kit-addons`](https://www.npmjs.com/package/@dytesdk/ui-kit-addons)    | [`@cloudflare/realtimekit-ui-addons`](https://www.npmjs.com/package/@cloudflare/realtimekit-ui-addons) |
+    | [`@dytesdk/video-background-transformer`](https://www.npmjs.com/package/@dytesdk/video-background-transformer) | [`@cloudflare/realtimekit-virtual-background`](https://www.npmjs.com/package/@cloudflare/realtimekit-virtual-background) |
+    | [`@dytesdk/recording-sdk`](https://www.npmjs.com/package/@dytesdk/recording-sdk)    | [`@cloudflare/realtimekit-recording-sdk`](https://www.npmjs.com/package/@cloudflare/realtimekit-recording-sdk) |
+  </TabItem>
+  <TabItem value="react-native" label="React Native">
+    The following table maps the deprecated Dyte SDKs to their new Cloudflare RealtimeKit equivalents for React Native:
+    | Dyte SDK                                                                          | RealtimeKit SDK                                                                                   |
+    | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+    | [`@dytesdk/web-core`](https://www.npmjs.com/package/@dytesdk/web-core)              | [`@cloudflare/realtimekit`](https://www.npmjs.com/package/@cloudflare/realtimekit)                  |
+    | [`@dytesdk/react-native-core`](https://www.npmjs.com/package/@dytesdk/react-native-core)  | [`@cloudflare/realtimekit-react-native`](https://www.npmjs.com/package/@cloudflare/realtimekit-react-native)      |
+    | [`@dytesdk/react-native-ui-kit`](https://www.npmjs.com/package/@dytesdk/react-native-ui-kit)      | [`@cloudflare/realtimekit-react-native-ui`](https://www.npmjs.com/package/@cloudflare/realtimekit-react-native-ui) |
+  </TabItem>
+</Tabs>
+
+## Migration Steps
+
+<Tabs groupId="framework">
+  <TabItem value="web-components" label="Web Components">
+    Migrating from Dyte to Cloudflare RealtimeKit is straightforward, as it primarily involves updating package names and renaming html tags, JS classes and css selectors.
+
+    To perform the migration manually, please follow the steps outlined below.
+
+    ### 1. Update `package.json`
+
+    First, uninstall all Dyte packages from your project:
+
+    ```bash
+    npm uninstall @dytesdk/web-core @dytesdk/ui-kit @dytesdk/ui-kit-addons @dytesdk/video-background-transformer @dytesdk/recording-sdk
+    ```
+
+    Next, install the corresponding Cloudflare RealtimeKit packages:
+
+    ```bash
+    npm install @cloudflare/realtimekit @cloudflare/realtimekit-ui @cloudflare/realtimekit-ui-addons @cloudflare/realtimekit-virtual-background @cloudflare/realtimekit-recording-sdk
+    ```
+
+    ### 2. Update Import Paths
+
+    In your project's source code, perform a find-and-replace for all Dyte package import paths with their new RealtimeKit equivalents.
+
+    | Find                                   | Replace With                               |
+    | -------------------------------------- | ------------------------------------------ |
+    | `@dytesdk/web-core`                      | `@cloudflare/realtimekit`                  |
+    | `@dytesdk/ui-kit`                        | `@cloudflare/realtimekit-ui`               |
+    | `@dytesdk/ui-kit-addons`                 | `@cloudflare/realtimekit-ui-addons`        |
+    | `@dytesdk/video-background-transformer`  | `@cloudflare/realtimekit-virtual-background` |
+    | `@dytesdk/recording-sdk`                 | `@cloudflare/realtimekit-recording-sdk`    |
+
+    ### 3. Update Codebase with New Naming Conventions
+
+    The migration introduces a new set of naming conventions. The general rule is to replace `Dyte` with `RealtimeKit`, `RTK`, or `Rtk`, depending on the context.
+
+    :::info Naming Convention Summary
+    - **Main Class**: `Dyte` -> `RealtimeKit` (e.g., `DyteClient` -> `RealtimeKitClient`)
+    - **Core SDK Classes & Types**: `Dyte` -> `RTK` (e.g., `DyteSelf` -> `RTKSelf`)
+    - **UI Kit Components & Types**: `Dyte` -> `Rtk` (e.g., `DyteMeeting` -> `RtkMeeting`)
+    - **CSS Selectors & HTML Tags**: `dyte-` -> `rtk-` (e.g., `dyte-meeting` -> `rtk-meeting`)
+    :::
+
+    #### Core SDK Changes
+
+    If you are using the CDN, first step is to replace the Dyte Core SDK script tag with RealtimeKit Core SDK.
+
+    Replace
+    ```html
+    <script src="https://cdn.dyte.in/core/dyte2.js"></script>
+    ```
+    with
+    ```html
+    <script src="https://cdn.jsdelivr.net/npm/@cloudflare/realtimekit@latest/dist/browser.js"></script>
+    ```
+
+    If you are importing, `DyteClient` in an `module` script tag, replace it with `RealtimeKitClient`.
+
+    Replace
+    ```html
+    <script type="module">
+    import DyteClient from 'https://cdn.jsdelivr.net/npm/@dytesdk/web-core@latest/dist/index.es.js';
+    </script>
+    ```
+    with
+    ```html
+    <script type="module">
+    import RealtimeKitClient from 'https://cdn.jsdelivr.net/npm/@cloudflare/realtimekit@latest/dist/index.es.js';
+    </script>
+    ```
+
+    | Find              | Replace With             |
+    | ----------------- | ------------------------ |
+    | `DyteClient`      | `RealtimeKitClient`      |
+
+    :::info
+    Instead of using `latest` version, use the specific version of RealtimeKit SDKs to prevent any unexpected behavior.
+    For example, Replace `https://cdn.jsdelivr.net/npm/@cloudflare/realtimekit@latest/dist/index.es.js` with `https://cdn.jsdelivr.net/npm/@cloudflare/realtimekit@1.1.6/dist/index.es.js`.
+    :::
+
+    **Classes & Types:**
+
+    ```js
+    // Before
+    import type { DyteSelf, DyteSelfMedia } from '@dytesdk/web-core';
+
+    // After
+    import type { RTKSelf, RTKSelfMedia } from '@cloudflare/realtimekit';
+    ```
+
+    | Find            | Replace With   |
+    | --------------- | -------------- |
+    | `DyteSelf`      | `RTKSelf`      |
+    | `DyteSelfMedia` | `RTKSelfMedia` |
+    | `DytePlugins`   | `RTKPlugins`   |
+
+    #### UI Kit Changes
+
+    If you are importing, UI Kit in an `module` script tag, replace it with RealtimeKit UI Kit.
+
+    Replace
+    ```html
+    <script type="module">
+    import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/@cloudflare/realtimekit-ui@latest/loader/index.es2017.js';
+    defineCustomElements();
+    </script>
+    ```
+    with
+    ```html
+    <script type="module">
+    import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/@cloudflare/realtimekit-ui@latest/loader/index.es2017.js';
+    defineCustomElements();
+    </script>
+    ```
+
+    For all UI Kit components, types, and providers, replace `Dyte` with `Rtk`.
+
+    **Components:**
+
+    ```html
+    <!-- Before -->
+    <dyte-meeting></dyte-meeting>
+
+    <!-- After -->
+    <rtk-meeting></rtk-meeting>
+    ```
+
+    | Find                  | Replace With         |
+    | --------------------- | -------------------- |
+    | `dyte-meeting`         | `rtk-meeting`         |
+    | `dyte-ui-provider`      | `rtk-ui-provider`      |
+    | `dyte-participant-tile` | `rtk-participant-tile` |
+    | `dyte-settings`        | `rtk-settings`        |
+    | `dyte-dialog-manager`   | `rtk-dialog-manager`   |
+
+    **CSS & HTML:**
+
+    If you have customized components using CSS or are using raw HTML tags, replace the `dyte-` prefix with `rtk-`.
+
+    ```css
+    /* Before */
+    dyte-meeting {
+      background-color: #fff;
+    }
+
+    /* After */
+    rtk-meeting {
+      background-color: #fff;
+    }
+    ```
+
+    :::note Custom Design System
+    If you are using a custom design system, remember to rename `provideDyteDesignSystem` to `provideRtkDesignSystem`.
+    :::
+
+    #### Add-on Packages
+
+    - **UI Kit Addons**: For custom elements like `dyte-full-screen-toggle`, rename them to `rtk-full-screen-toggle`.
+    - **Video Background Transformer**: This package is now `@cloudflare/realtimekit-virtual-background`. Replace the `DyteVideoBackgroundTransformer` class with `RealtimeKitVideoBackgroundTransformer`.
+    - **Recording SDK**: This package is now `@cloudflare/realtimekit-recording-sdk`. Replace the `DyteRecording` class with `RealtimeKitRecording`.
+
+  </TabItem>
+
+  <TabItem value="react" label="React">
+    Migrating from Dyte to Cloudflare RealtimeKit is straightforward, as it primarily involves updating package names and renaming components, hooks, and classes.
+
+    :::info Automated Migration
+    To automate the migration process, we provide a [CodeMod tool](https://www.npmjs.com/package/@dytesdk/upgrade-to-rtk). This is the recommended approach for a quick and easy upgrade.
+    :::
+
+    If you prefer to perform the migration manually or if the CodeMod tool doesn't suit your specific use case, please follow the steps outlined below.
+
+    ### 1. Update `package.json`
+
+    First, uninstall all Dyte packages from your project:
+
+    ```bash
+    npm uninstall @dytesdk/web-core @dytesdk/react-web-core @dytesdk/ui-kit @dytesdk/react-ui-kit @dytesdk/ui-kit-addons @dytesdk/video-background-transformer @dytesdk/recording-sdk
+    ```
+
+    Next, install the corresponding Cloudflare RealtimeKit packages:
+
+    ```bash
+    npm install @cloudflare/realtimekit @cloudflare/realtimekit-react @cloudflare/realtimekit-ui @cloudflare/realtimekit-react-ui @cloudflare/realtimekit-ui-addons @cloudflare/realtimekit-virtual-background @cloudflare/realtimekit-recording-sdk
+    ```
+
+    ### 2. Update Import Paths
+
+    In your project's source code, perform a find-and-replace for all Dyte package import paths with their new RealtimeKit equivalents.
+
+    | Find                                   | Replace With                               |
+    | -------------------------------------- | ------------------------------------------ |
+    | `@dytesdk/web-core`                      | `@cloudflare/realtimekit`                  |
+    | `@dytesdk/react-web-core`                | `@cloudflare/realtimekit-react`            |
+    | `@dytesdk/ui-kit`                        | `@cloudflare/realtimekit-ui`               |
+    | `@dytesdk/react-ui-kit`                  | `@cloudflare/realtimekit-react-ui`         |
+    | `@dytesdk/ui-kit-addons`                 | `@cloudflare/realtimekit-ui-addons`        |
+    | `@dytesdk/video-background-transformer`  | `@cloudflare/realtimekit-virtual-background` |
+    | `@dytesdk/recording-sdk`                 | `@cloudflare/realtimekit-recording-sdk`    |
+
+    ### 3. Update Codebase with New Naming Conventions
+
+    The migration introduces a new set of naming conventions. The general rule is to replace `Dyte` with `RealtimeKit`, `RTK`, or `Rtk`, depending on the context.
+
+    :::info Naming Convention Summary
+    - **React Hooks & Providers**: `Dyte` -> `RealtimeKit` (e.g., `useDyteClient` -> `useRealtimeKitClient`)
+    - **Core SDK Classes & Types**: `Dyte` -> `RTK` (e.g., `DyteSelf` -> `RTKSelf`)
+    - **UI Kit Components & Types**: `Dyte` -> `Rtk` (e.g., `DyteMeeting` -> `RtkMeeting`)
+    - **CSS Selectors & HTML Tags**: `dyte-` -> `rtk-` (e.g., `dyte-meeting` -> `rtk-meeting`)
+    :::
+
+    #### Core SDK Changes
+
+    Update your React hooks, providers, and Core SDK classes by replacing `Dyte` with `RealtimeKit` or `RTK`.
+
+    **Hooks & Providers:**
+
+    ```js
+    // Before
+    import { useDyteClient, DyteProvider } from '@dytesdk/react-web-core';
+
+    // After
+    import { useRealtimeKitClient, RealtimeKitProvider } from '@cloudflare/realtimekit-react';
+    ```
+
+    | Find              | Replace With             |
+    | ----------------- | ------------------------ |
+    | `DyteClient`      | `RealtimeKitClient`      |
+    | `useDyteClient`   | `useRealtimeKitClient`   |
+    | `useDyteSelector` | `useRealtimeKitSelector` |
+    | `DyteProvider`    | `RealtimeKitProvider`    |
+
+    **Classes & Types:**
+
+    ```js
+    // Before
+    import type { DyteSelf, DyteSelfMedia } from '@dytesdk/web-core';
+
+    // After
+    import type { RTKSelf, RTKSelfMedia } from '@cloudflare/realtimekit';
+    ```
+
+    | Find            | Replace With   |
+    | --------------- | -------------- |
+    | `DyteSelf`      | `RTKSelf`      |
+    | `DyteSelfMedia` | `RTKSelfMedia` |
+    | `DytePlugins`   | `RTKPlugins`   |
+
+    #### UI Kit Changes
+
+    For all UI Kit components, types, and providers, replace `Dyte` with `Rtk`.
+
+    **Components & Providers:**
+
+    ```js
+    // Before
+    import { DyteMeeting, DyteParticipantTile } from '@dytesdk/react-ui-kit';
+
+    // After
+    import { RtkMeeting, RtkParticipantTile } from '@cloudflare/realtimekit-react-ui';
+    ```
+
+    | Find                  | Replace With         |
+    | --------------------- | -------------------- |
+    | `DyteMeeting`         | `RtkMeeting`         |
+    | `DyteUiProvider`      | `RtkUiProvider`      |
+    | `DyteParticipantTile` | `RtkParticipantTile` |
+    | `DyteSettings`        | `RtkSettings`        |
+    | `DyteDialogManager`   | `RtkDialogManager`   |
+
+    **CSS & HTML:**
+
+    If you have customized components using CSS or are using raw HTML tags, replace the `dyte-` prefix with `rtk-`.
+
+    ```css
+    /* Before */
+    dyte-meeting {
+      background-color: #fff;
+    }
+
+    /* After */
+    rtk-meeting {
+      background-color: #fff;
+    }
+    ```
+
+    :::note Custom Design System
+    If you are using a custom design system, remember to rename `provideDyteDesignSystem` to `provideRtkDesignSystem`.
+    :::
+
+    #### Add-on Packages
+
+    - **UI Kit Addons**: For custom elements like `dyte-full-screen-toggle`, rename them to `rtk-full-screen-toggle`.
+    - **Video Background Transformer**: This package is now `@cloudflare/realtimekit-virtual-background`. Replace the `DyteVideoBackgroundTransformer` class with `RealtimeKitVideoBackgroundTransformer`.
+    - **Recording SDK**: This package is now `@cloudflare/realtimekit-recording-sdk`. Replace the `DyteRecording` class with `RealtimeKitRecording`.
+
+  </TabItem>
+  <TabItem value="angular" label="Angular">
+    Migrating from Dyte to Cloudflare RealtimeKit is straightforward, as it primarily involves updating package names and renaming html tags, JS classes and css selectors.
+
+    To perform the migration manually, please follow the steps outlined below.
+
+    ### 1. Update `package.json`
+
+    First, uninstall all Dyte packages from your project:
+
+    ```bash
+    npm uninstall @dytesdk/web-core @dytesdk/ui-kit @dytesdk/angular-ui-kit @dytesdk/ui-kit-addons @dytesdk/video-background-transformer @dytesdk/recording-sdk
+    ```
+
+    Next, install the corresponding Cloudflare RealtimeKit packages:
+
+    ```bash
+    npm install @cloudflare/realtimekit @cloudflare/realtimekit-ui @cloudflare/realtimekit-angular-ui @cloudflare/realtimekit-ui-addons @cloudflare/realtimekit-virtual-background @cloudflare/realtimekit-recording-sdk
+    ```
+
+    ### 2. Update Import Paths
+
+    In your project's source code, perform a find-and-replace for all Dyte package import paths with their new RealtimeKit equivalents.
+
+    | Find                                   | Replace With                               |
+    | -------------------------------------- | ------------------------------------------ |
+    | `@dytesdk/web-core`                      | `@cloudflare/realtimekit`                  |
+    | `@dytesdk/ui-kit`                        | `@cloudflare/realtimekit-ui`               |
+    | `@dytesdk/angular-ui-kit`                | `@cloudflare/realtimekit-angular-ui`       |
+    | `@dytesdk/ui-kit-addons`                 | `@cloudflare/realtimekit-ui-addons`        |
+    | `@dytesdk/video-background-transformer`  | `@cloudflare/realtimekit-virtual-background` |
+    | `@dytesdk/recording-sdk`                 | `@cloudflare/realtimekit-recording-sdk`    |
+
+    ### 3. Update Codebase with New Naming Conventions
+
+    The migration introduces a new set of naming conventions. The general rule is to replace `Dyte` with `RealtimeKit`, `RTK`, or `Rtk`, depending on the context.
+
+    :::info Naming Convention Summary
+    - **Main Class**: `Dyte` -> `RealtimeKit` (e.g., `DyteClient` -> `RealtimeKitClient`)
+    - **Core SDK Classes & Types**: `Dyte` -> `RTK` (e.g., `DyteSelf` -> `RTKSelf`)
+    - **UI Kit Components & Types**: `Dyte` -> `Rtk` (e.g., `DyteMeeting` -> `RtkMeeting`)
+    - **CSS Selectors & HTML Tags**: `dyte-` -> `rtk-` (e.g., `dyte-meeting` -> `rtk-meeting`)
+    :::
+
+    #### Core SDK Changes
+
+    Replace
+    ```html
+    <script type="module">
+    import DyteClient from '@dytesdk/web-core';
+    </script>
+    ```
+    with
+    ```html
+    <script type="module">
+    import RealtimeKitClient from '@cloudflare/realtimekit';
+    </script>
+    ```
+
+    | Find              | Replace With             |
+    | ----------------- | ------------------------ |
+    | `DyteClient`      | `RealtimeKitClient`      |
+
+    **Classes & Types:**
+
+    ```js
+    // Before
+    import type { DyteSelf, DyteSelfMedia } from '@dytesdk/web-core';
+
+    // After
+    import type { RTKSelf, RTKSelfMedia } from '@cloudflare/realtimekit';
+    ```
+
+    | Find            | Replace With   |
+    | --------------- | -------------- |
+    | `DyteSelf`      | `RTKSelf`      |
+    | `DyteSelfMedia` | `RTKSelfMedia` |
+    | `DytePlugins`   | `RTKPlugins`   |
+
+    #### UI Kit Changes
+
+    To be able to use UI Kit components, instead of `DyteComponentsModule`, import `RealtimeKitComponentsModule` from `@cloudflare/realtimekit-angular-ui`.
+
+    Replace
+    ```js
+    import { DyteComponentsModule } from '@dytesdk/angular-ui-kit';
+    ```
+    with
+    ```js
+    import { RealtimeKitComponentsModule } from '@cloudflare/realtimekit-angular-ui';
+    ```
+
+    For all UI Kit components, types, and providers, replace `Dyte` with `Rtk`.
+
+    **Components:**
+
+    ```html
+    <!-- Before -->
+    <dyte-meeting></dyte-meeting>
+
+    <!-- After -->
+    <rtk-meeting></rtk-meeting>
+    ```
+
+    | Find                  | Replace With         |
+    | --------------------- | -------------------- |
+    | `DyteComponentsModule` | `RealtimeKitComponentsModule` |
+    | `dyte-meeting`         | `rtk-meeting`         |
+    | `dyte-ui-provider`      | `rtk-ui-provider`      |
+    | `dyte-participant-tile` | `rtk-participant-tile` |
+    | `dyte-settings`        | `rtk-settings`        |
+    | `dyte-dialog-manager`   | `rtk-dialog-manager`   |
+
+    **CSS & HTML:**
+
+    If you have customized components using CSS or are using raw HTML tags, replace the `dyte-` prefix with `rtk-`.
+
+    ```css
+    /* Before */
+    dyte-meeting {
+      background-color: #fff;
+    }
+
+    /* After */
+    rtk-meeting {
+      background-color: #fff;
+    }
+    ```
+
+    :::note Custom Design System
+    If you are using a custom design system, remember to rename `provideDyteDesignSystem` to `provideRtkDesignSystem`.
+    :::
+
+    #### Add-on Packages
+
+    - **UI Kit Addons**: For custom elements like `dyte-full-screen-toggle`, rename them to `rtk-full-screen-toggle`.
+    - **Video Background Transformer**: This package is now `@cloudflare/realtimekit-virtual-background`. Replace the `DyteVideoBackgroundTransformer` class with `RealtimeKitVideoBackgroundTransformer`.
+    - **Recording SDK**: This package is now `@cloudflare/realtimekit-recording-sdk`. Replace the `DyteRecording` class with `RealtimeKitRecording`.
+
+  </TabItem>
+
+  <TabItem value="react-native" label="React Native">
+    Migrating from Dyte to Cloudflare RealtimeKit is straightforward, as it primarily involves updating package names and renaming components, hooks, and classes.
+
+    To perform the migration manually, please follow the steps outlined below.
+
+    ### 1. Update `package.json`
+
+    First, uninstall all Dyte packages from your project:
+
+    ```bash
+    npm uninstall @dytesdk/web-core @dytesdk/react-native-core @dytesdk/react-native-ui-kit @dyteinternals/react-native-webrtc
+    ```
+
+    Next, Uninstall all the old ui-kit dependencies from your project:
+
+    ```bash
+    npm uninstall react-native-document-picker react-native-file-viewer react-native-fs react-native-safe-area-context react-native-sound-player react-native-svg react-native-webview
+    ```
+
+    Next install all the new ui-kit dependencies:
+
+    ```bash
+    npm install @cloudflare/react-native-webrtc @react-native-documents/picker react-native-file-viewer react-native-fs react-native-sound-player react-native-webview
+    ```
+
+    Next, install the corresponding Cloudflare RealtimeKit packages:
+
+    ```bash
+    npm install @cloudflare/realtimekit-react-native @cloudflare/realtimekit-react-native-ui
+    ```
+
+    Install these **required** dependencies as per your ```react-native``` version.
+
+    - ```react-native-safe-area-context```
+      - **react-native (0.64 - 0.74)** : 
+        ```bash
+        npm install react-native-safe-area-context@^4.0.0
+        ```
+      - **react-native (>= 0.74)** : 
+        ```bash
+        npm install react-native-safe-area-context@^5.0.0
+        ```
+
+    - ```react-native-svg```
+      - Follow the [installation instructions](https://github.com/react-native-svg/react-native-svg#installation) for react-native-svg.
+      - ```bash
+        npm install react-native-svg@<compatible-version>
+        ```
+
+    ### 2. Update Import Paths
+
+    In your project's source code, perform a find-and-replace for all Dyte package import paths with their new RealtimeKit equivalents.
+
+    | Find                                   | Replace With                               |
+    | -------------------------------------- | ------------------------------------------ |
+    | `@dytesdk/web-core`                      | `@cloudflare/realtimekit`                  |
+    | `@dytesdk/react-native-core`             | `@cloudflare/realtimekit-react-native`|
+    | `@dytesdk/react-native-ui-kit`           | `@cloudflare/realtimekit-react-native-ui`|
+
+    ### 3. Update Codebase with New Naming Conventions
+
+    The migration introduces a new set of naming conventions. The general rule is to replace `Dyte` with `RealtimeKit`, `RTK`, or `Rtk`, depending on the context.
+
+    :::info Naming Convention Summary
+    - **React Hooks & Providers**: `Dyte` -> `RealtimeKit` (e.g., `useDyteClient` -> `useRealtimeKitClient`)
+    - **Core SDK Classes & Types**: `Dyte` -> `RTK` (e.g., `DyteSelf` -> `RTKSelf`)
+    - **UI Kit Components & Types**: `Dyte` -> `Rtk` (e.g., `DyteMeeting` -> `RtkMeeting`)
+    - **CSS Selectors & HTML Tags**: `dyte-` -> `rtk-` (e.g., `dyte-meeting` -> `rtk-meeting`)
+    :::
+
+    #### Core SDK Changes
+
+    Update your React hooks, providers, and Core SDK classes by replacing `Dyte` with `RealtimeKit` or `RTK`.
+
+    **Hooks & Providers:**
+
+    ```js
+    // Before
+    import { useDyteClient, DyteProvider } from '@dytesdk/react-native-core';
+
+    // After
+    import { useRealtimeKitClient, RealtimeKitProvider } from '@cloudflare/realtimekit-react-native';
+    ```
+
+    | Find              | Replace With             |
+    | ----------------- | ------------------------ |
+    | `DyteClient`      | `RealtimeKitClient`      |
+    | `useDyteClient`   | `useRealtimeKitClient`   |
+    | `useDyteSelector` | `useRealtimeKitSelector` |
+    | `DyteProvider`    | `RealtimeKitProvider`    |
+
+    **Classes & Types:**
+
+    ```js
+    // Before
+    import type { DyteSelf, DyteSelfMedia } from '@dytesdk/react-native-core';
+
+    // After
+    import type { RTKSelf, RTKSelfMedia } from '@cloudflare/realtimekit-react-native';
+    ```
+
+    | Find            | Replace With   |
+    | --------------- | -------------- |
+    | `DyteSelf`      | `RTKSelf`      |
+    | `DyteSelfMedia` | `RTKSelfMedia` |
+    | `DytePlugins`   | `RTKPlugins`   |
+
+    #### UI Kit Changes
+
+    For all UI Kit components, types, and providers, replace `Dyte` with `Rtk`.
+
+    **Components & Providers:**
+
+    ```js
+    // Before
+    import { DyteMeeting, DyteParticipantTile } from '@dytesdk/react-native-ui-kit';
+
+    // After
+    import { RtkMeeting, RtkParticipantTile } from '@cloudflare/realtimekit-react-native-ui';
+    ```
+
+    | Find                  | Replace With         |
+    | --------------------- | -------------------- |
+    | `DyteMeeting`         | `RtkMeeting`         |
+    | `DyteUiProvider`      | `RtkUiProvider`      |
+    | `DyteParticipantTile` | `RtkParticipantTile` |
+    | `DyteSettings`        | `RtkSettings`        |
+    | `DyteDialogManager`   | `RtkDialogManager`   |
+
+    **CSS & HTML:**
+
+    If you have customized components using CSS or are using raw HTML tags, replace the `dyte-` prefix with `rtk-`.
+
+    ```css
+    /* Before */
+    dyte-meeting {
+      background-color: #fff;
+    }
+
+    /* After */
+    rtk-meeting {
+      background-color: #fff;
+    }
+    ```
+
+    :::note Custom Design System
+    If you are using a custom design system, remember to rename `provideDyteDesignSystem` to `provideRtkDesignSystem`.
+    :::
+  </TabItem>
+</Tabs>
