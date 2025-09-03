@@ -135,46 +135,46 @@ export type SectionsGroup = {
   className?: string;
 };
 
-const SECTION_GROUPS: SectionsGroup[][] = [
-  [
-    {
-      name: 'UI Kit',
-      section: 'web-prebuilt',
-      className: 'deprecated-badge',
-    },
-  ],
-  [
-    {
-      name: 'UI Kit',
-      section: 'web-ui-kit',
-      description:
-        'Use our pre-built UI components as a base to build on top of.',
-    },
-    {
-      name: 'Core SDK',
-      section: 'web-core-sdk',
-      description: 'Build your own UI from scratch, use our low level APIs.',
-    },
-  ],
-  [
-    {
-      name: 'UI Kit',
-      section: 'mobile-ui-kit',
-      description: 'Use our pre-built mobile UI Kit SDK, ready to go',
-    },
-    {
-      name: 'Core SDK',
-      section: 'mobile-core',
-      description: 'Build your own UI from scratch, use our low level APIs.',
-    },
-  ],
-  [
-    {
-      name: 'Plugin SDK for Web',
-      section: 'plugin-sdk',
-      description: 'Build real-time collaborative apps using Dyte.',
-    },
-  ],
-];
+// const SECTION_GROUPS: SectionsGroup[][] = [
+//   [
+//     {
+//       name: 'UI Kit',
+//       section: 'web-prebuilt',
+//       className: 'deprecated-badge',
+//     },
+//   ],
+//   [
+//     {
+//       name: 'UI Kit',
+//       section: 'web-ui-kit',
+//       description:
+//         'Use our pre-built UI components as a base to build on top of.',
+//     },
+//     {
+//       name: 'Core SDK',
+//       section: 'web-core-sdk',
+//       description: 'Build your own UI from scratch, use our low level APIs.',
+//     },
+//   ],
+//   [
+//     {
+//       name: 'UI Kit',
+//       section: 'mobile-ui-kit',
+//       description: 'Use our pre-built mobile UI Kit SDK, ready to go',
+//     },
+//     {
+//       name: 'Core SDK',
+//       section: 'mobile-core',
+//       description: 'Build your own UI from scratch, use our low level APIs.',
+//     },
+//   ],
+//   [
+//     {
+//       name: 'Plugin SDK for Web',
+//       section: 'plugin-sdk',
+//       description: 'Build real-time collaborative apps using Dyte.',
+//     },
+//   ],
+// ];
 
 export { SECTIONS, SECTION_GROUPS };

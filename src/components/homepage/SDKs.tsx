@@ -17,14 +17,13 @@ export default function SDKs() {
   return (
     <section className="mx-auto mb-32 flex w-full max-w-5xl flex-col p-4 py-0">
       <span className="mb-2 uppercase tracking-wider text-text-400">
-        SDK Documentation
       </span>
 
-      <h3 className="mb-12 text-4xl">
+      {/* <h3 className="mb-12 text-4xl">
         Build the way you want in the framework you want!
-      </h3>
+      </h3> */}
 
-      <div className="mb-10">
+      {/* <div className="mb-10">
         <h4 className="mb-2 text-2xl">UI Kit</h4>
 
         <p className="mb-6 text-text-400">
@@ -69,9 +68,9 @@ export default function SDKs() {
             icon="/static/landing-page/sdk-icons/kotlin.png"
           />
         </div>
-      </div>
+      </div>  */}
 
-      <div>
+      {/* <div>
         <h4 className="mb-2 text-2xl">Core SDK</h4>
 
         <p className="mb-6 text-text-400">
@@ -110,8 +109,8 @@ export default function SDKs() {
             to="/android-core"
             icon="/static/landing-page/sdk-icons/kotlin.png"
           />
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </section>
   );
 }
