@@ -16,7 +16,7 @@ import PhHelloBar from '../components/homepage/PhHelloBar';
 export default function Homepage() {
   return (
     <Layout
-      title="Dyte Documentation"
+      title="Odoo"
       wrapperClassName="homepage flex flex-col"
       noFooter
     >
@@ -42,9 +42,9 @@ export default function Homepage() {
 
       <HeroSection />
 
-      <GuidesAndSamples />
+      {/* <GuidesAndSamples /> */}
 
-      <SDKs />
+      {/* <SDKs />
 
       <APIReferenceSection />
 
@@ -55,7 +55,7 @@ export default function Homepage() {
 
       <CommunitySection />
 
-      <HomeFooter />
+      <HomeFooter /> */}
     </Layout>
   );
 }

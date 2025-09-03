@@ -555,18 +555,18 @@ const config = {
             type: 'search',
             position: 'right',
           },
-          {
-            label: 'Book a demo',
-            href: 'https://dyte.io/schedule-demo',
-            position: 'right',
-            className: 'navbar-book-demo',
-          },
-          {
-            label: 'Sign Up',
-            href: 'https://dev.dyte.io/register',
-            position: 'right',
-            className: 'dev-portal-signup dev-portal-link',
-          },
+          // {
+          //   label: 'Book a demo',
+          //   href: 'https://dyte.io/schedule-demo',
+          //   position: 'right',
+          //   className: 'navbar-book-demo',
+          // },
+          // {
+          //   label: 'Sign Up',
+          //   href: 'https://dev.dyte.io/register',
+          //   position: 'right',
+          //   className: 'dev-portal-signup dev-portal-link',
+          // },
         ],
       },
       footer: {
