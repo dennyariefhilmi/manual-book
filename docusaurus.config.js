@@ -534,18 +534,18 @@ const config = {
           //   label: 'Test',
           //   to: '/api/',
           // },
-          {
-            label: 'Resources',
-            type: 'dropdown',
-            className: 'dyte-dropdown resources-dropdown',
-            items: [
-              {
-                type: 'html',
-                value: resourcesHTML,
-                className: 'dyte-dropdown',
-              },
-            ],
-          },
+          // {
+          //   label: 'Resources',
+          //   type: 'dropdown',
+          //   className: 'dyte-dropdown resources-dropdown',
+          //   items: [
+          //     {
+          //       type: 'html',
+          //       value: resourcesHTML,
+          //       className: 'dyte-dropdown',
+          //     },
+          //   ],
+          // },
           {
             label: 'Support',
             to: 'https://dyte.io/contact?type=docs',
