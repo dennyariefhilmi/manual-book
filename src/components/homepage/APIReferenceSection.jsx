@@ -11,7 +11,7 @@ export default function APIReferenceSection() {
         <link rel="prefetch" href="/static/landing-page/api-ref-light.png" />
         <link rel="prefetch" href="/static/landing-page/api-ref-dark.png" />
       </Head>
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-10 rounded-2xl bg-gradient-to-r from-black to-zinc-800 px-6 py-20 text-center text-white dark:from-zinc-100 dark:to-white dark:text-black lg:flex-row lg:p-20 lg:text-left">
+      {/* <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-10 rounded-2xl bg-gradient-to-r from-black to-zinc-800 px-6 py-20 text-center text-white dark:from-zinc-100 dark:to-white dark:text-black lg:flex-row lg:p-20 lg:text-left">
         <Link
           href="/api"
           aria-label="API Reference"
@@ -19,8 +19,8 @@ export default function APIReferenceSection() {
           className="absolute top-8 right-8 flex h-16 w-16 items-center justify-center rounded-full bg-zinc-600/40 dark:bg-transparent"
         >
           <ArrowUpRight className="h-6 w-6 text-zinc-400 dark:text-black" />
-        </Link>
-        <div className="flex-1">
+        </Link> */}
+        {/* <div className="flex-1">
           <h2 className="text-4xl">REST API Reference</h2>
           <p className="text-zinc-400">
             Don&apos;t worry, they are&apos;t complex. Use our
@@ -78,8 +78,8 @@ export default function APIReferenceSection() {
               </div>
             </li>
           </ul>
-        </div>
-        <div className="flex flex-1 justify-end">
+        </div> */}
+        {/* <div className="flex flex-1 justify-end">
           <ThemedImage
             sources={{
               light: '/static/landing-page/api-ref-light.png',
@@ -88,8 +88,8 @@ export default function APIReferenceSection() {
             alt="API Reference Preview"
             loading="lazy"
           />
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </section>
   );
 }
