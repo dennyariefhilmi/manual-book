@@ -69,7 +69,7 @@ export default function Home() {
     >
       <Head>
         {/* Load styles for Stoplight Elements */}
-        <title>API Documentation | Dyte Docs</title>
+        <title>Odoo</title>
         <link rel="preload" href="/assets/css/elements.min.css" as="style" />
         <link rel="stylesheet" href="/assets/css/elements.min.css" />
         <meta

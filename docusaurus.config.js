@@ -10,7 +10,7 @@ const meta = {
   title: 'Odoo',
   tagline:
     'Explore comprehensive documentation for Dyte, including guides, references, and best practices.',
-  url: '',
+  url: 'https://manual-book.vercel.app/',
   baseUrl: '/',
   favicon: '/favicon.ico',
   i18n: {
@@ -493,7 +493,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: '/img/dyte-docs-card.png',
+      image: '/logo/logo_jpc.png',
       colorMode: {
         defaultMode: 'light',
       },
@@ -506,11 +506,11 @@ const config = {
       navbar: {
         logo: {
           href: '/',
-          src: '/logo/light.svg',
-          srcDark: '/logo/dark.svg',
-          alt: 'Dyte Documentation | Dyte Docs',
+          src: '/logo/logo_jpc.png',
+          srcDark: '/logo/logo_jpc.png',
+          alt: 'Test',
           height: '40px',
-          width: '101px',
+          width: '40px',
         },
         items: [
           {
@@ -530,10 +530,10 @@ const config = {
               },
             ],
           },
-          {
-            label: 'Test',
-            to: '/api/',
-          },
+          // {
+          //   label: 'Test',
+          //   to: '/api/',
+          // },
           {
             label: 'Resources',
             type: 'dropdown',
@@ -574,7 +574,7 @@ const config = {
           href: '/',
           src: '/logo/light.svg',
           srcDark: '/logo/dark.svg',
-          alt: 'Dyte Documentation | Dyte Docs',
+          alt: 'Odoo',
           height: '36px',
         },
         links: [
