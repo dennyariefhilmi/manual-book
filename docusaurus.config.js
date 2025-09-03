@@ -519,7 +519,7 @@ const config = {
             className: 'guides-top-header',
           },
           {
-            label: 'SDKs',
+            label: 'Changelog',
             type: 'dropdown',
             className: 'dyte-dropdown',
             items: [
@@ -531,7 +531,7 @@ const config = {
             ],
           },
           {
-            label: 'REST API',
+            label: 'Test',
             to: '/api/',
           },
           {

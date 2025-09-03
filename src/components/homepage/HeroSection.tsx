@@ -11,28 +11,28 @@ import clsx from 'clsx';
 
 const PRODUCTS = [
   {
-    title: 'Live Video Calls',
+    title: 'Guides',
     link: '/guides/live-video/intro-video-conf',
     icon: VideoRegular,
     lightImage: '/static/landing-page/hero/video-graphic.png',
     darkImage: '/static/landing-page/hero/video-graphic-dark.png',
-    text: 'Enable live video communication within your application using WebRTC. Perfect for education, telemedicine, social networks and gaming',
+    text: '',
   },
   {
-    title: 'Voice Calls',
+    title: 'Changelog',
     link: '/guides/voice-conf/intro-voice-conf',
     icon: MicRegular,
     lightImage: '/static/landing-page/hero/voice-graphic.png',
     darkImage: '/static/landing-page/hero/voice-graphic-dark.png',
-    text: 'Incorporate high-quality real-time audio into your application using WebRTC. Build voice calls, audio conferences, voice chats in games and more',
+    text: '',
   },
   {
-    title: 'Interactive Live Streaming',
+    title: 'Live Support',
     link: '/guides/livestream/livestream-overview',
     icon: LiveRegular,
     lightImage: '/static/landing-page/hero/livestream-graphic.png',
     darkImage: '/static/landing-page/hero/livestream-graphic-dark.png',
-    text: 'Integrate highly scalable live video broadcasting capabilities into your app using HLS, ideal for apps that involve streaming webinars, sports or live events',
+    text: '',
   },
 ];
 
@@ -83,13 +83,10 @@ export default function HeroSection() {
       <section className="no-underline-links px-4 pt-16 lg:py-0">
         <div className="flex flex-col items-center justify-between py-14">
           <h2 className="mb-4 font-jakarta text-5xl font-bold">
-            Build with Dyte
+            Get Started with Odoo
           </h2>
           <p className="max-w-xl text-center text-text-400">
-            At Dyte, we're building the future of real-time communication.
-            Integrate programmable, and easily customizable live video and voice
-            into your web, mobile, and desktop applications with just a few
-            lines of code.
+            Manage smarter with Odoo. One platform, many solutions. This manual will help you get started and make the most out of Odoo in our daily operations.
           </p>
         </div>
       </section>
