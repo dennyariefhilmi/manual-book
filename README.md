@@ -1,22 +1,22 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-  <a href="https://dyte.io">
-    <img src="https://assets.dyte.io/logo-outlined.png" alt="Logo" width="120">
+  <a href="">
+    <img src="" alt="Logo" width="120">
   </a>
 
-  <h2 align="center">Dyte Docs</h3>
+  <h2 align="center"></h3>
 
   <p align="center">
-    Dyte's documentation portal, built with Docusaurus.
+    Dbuilt with Docusaurus.
     <br />
     <a href="https://docs.dyte.io"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://app.dyte.io">View Demo</a>
+    <a href="">View Demo</a>
     ·
-    <a href="https://github.com/dyte-io/docs/issues">Report Bug</a>
+    <a href="">Report Bug</a>
     ·
-    <a href="https://github.com/dyte-io/docs/issues">Request Feature</a>
+    <a href="">Request Feature</a>
   </p>
 </p>
 
@@ -146,15 +146,6 @@ See [CHANGELOG](./CHANGELOG.md).
 
 <!-- ROADMAP -->
 
-## Roadmap
-
-See the [open issues](https://github.com/dyte-io/docs/issues) for a list of proposed features (and known issues).
-
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. Sincere thanks to all our contributors. Thank you, [contributors](https://github.com/dyte-io/docs/graphs/contributors)!
 
 You are requested to follow the contribution guidelines specified in [CONTRIBUTING.md](./CONTRIBUTING.md) and code of conduct at [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) while contributing to the project :smile:.
 
@@ -171,11 +162,3 @@ Distributed under the Apache License, Version 2.0. See [`LICENSE`](./LICENSE) fo
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-## About
-
-`docs` is created & maintained by Dyte, Inc. You can find us on Twitter - [@dyte_io](https://twitter.com/dyte_io) or write to us at `dev [at] dyte.io`.
-
-The names and logos for Dyte are trademarks of Dyte, Inc.
-
-We love open source software! See [our other projects](https://github.com/dyte-io) and [our products](https://dyte.io).
