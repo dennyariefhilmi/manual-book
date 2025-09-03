@@ -1,34 +1,34 @@
 {
   "index_name": "docs",
-  "sitemap_urls": ["https://docs.dyte.io/sitemap.xml"],
+  "sitemap_urls": [""],
   "start_urls": [
     {
-      "url": "https://docs.dyte.io/guides",
+      "url": "",
       "tags": "guides",
       "selectors_key": "guides"
     },
     {
-      "url": "https://docs.dyte.io/cli",
+      "url": "",
       "tags": "cli",
       "selectors_key": "cli"
     },
     {
-      "url": "https://docs.dyte.io/react-ui-kit",
+      "url": "",
       "tags": "react-ui-kit",
       "selectors_key": "react-ui-kit"
     },
     {
-      "url": "https://docs.dyte.io/ui-kit",
+      "url": "",
       "tags": "ui-kit",
       "selectors_key": "ui-kit"
     },
     {
-      "url": "https://docs.dyte.io/angular-ui-kit",
+      "url": "",
       "tags": "angular-ui-kit",
       "selectors_key": "angular-ui-kit"
     },
     {
-      "url": "https://docs.dyte.io/vue-ui-kit",
+      "url": "",
       "tags": "vue-ui-kit",
       "selectors_key": "vue-ui-kit"
     },

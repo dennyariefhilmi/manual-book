@@ -7,10 +7,10 @@ const code_themes = {
 
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
-  title: 'Dyte Docs',
+  title: '',
   tagline:
     'Explore comprehensive documentation for Dyte, including guides, references, and best practices.',
-  url: 'https://docs.dyte.io',
+  url: '',
   baseUrl: '/',
   favicon: '/favicon.ico',
   i18n: {
