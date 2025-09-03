@@ -177,4 +177,4 @@ export type SectionsGroup = {
 //   ],
 // ];
 
-export { SECTIONS, SECTION_GROUPS };
+export { SECTIONS };
